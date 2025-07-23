@@ -46,7 +46,8 @@
                         <img src="<%= listing.image.url %>" class="card-img-top" alt="Image of <%= listing.title %>">
                         <div class="card-body">
                             <h5 class="card-title">
-                                <a href="/listings/<%= listing._id %>" class="stretched-link text-decoration-none text-dark"><strong>Location name:</strong> <%= listing.title %></a>
+                                <a href="/listings/<%= listing._id %>" class="stretched-link text-decoration-none text-dark" style="display: block; text-align: center; font-size: 1.5rem;"><%= listing.title %></a>
+                                <br>
                             </h5>
                             <p class="card-text"><strong>By:</strong> <%= listing.User.username %></p>
                             <p class="card-text"><strong>Description:</strong> <%= listing.description %></p>

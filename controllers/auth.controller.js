@@ -14,7 +14,7 @@ router.get('/sign-up', (req, res) => {
 
 router.post('/sign-up', async (req, res) => {
 
-    console.log(req)
+    
     const userInDatabase = await User.findOne({ username: req.body.username })
     if (userInDatabase) {
         return res.send('Username already taken.')
@@ -33,7 +33,7 @@ router.post('/sign-up', async (req, res) => {
     }
 
     req.session.save(() => {
-        console.log(req.session)
+        
         res.redirect('/')
     })
 })
@@ -47,7 +47,7 @@ router.get('/sign-in', (req, res) => {
 router.post('/sign-in', async (req, res) => {
 
     const userInDatabase = await User.findOne({ username: req.body.username })
-    console.log(userInDatabase)
+    
 
     if (!userInDatabase) {
         return res.send('Login failed. Please try again.')

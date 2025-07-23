@@ -11,7 +11,7 @@ const authController = require('./controllers/auth.controller')
 const listingController = require('./controllers/listing.controller')
 const isSignedIn = require('./middleware/is-signed-in')
 const passUserToView = require('./middleware/pass-user-to-view')
-// ...existing code...
+
 
 // DATABASE CONNECTION
 mongoose.connect(process.env.MONGODB_URI)
@@ -19,7 +19,6 @@ mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name} 🙃.`)
 })
 
-// MIDDLEWARE
 
 app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride('_method'))
@@ -37,10 +36,9 @@ app.use(passUserToView)
 app.get('/', (req, res) => {
     res.render('index.ejs', { title: 'my App'})
 })
-// css
+
 app.use(express.static(path.join(__dirname, 'public')))
-// css
-// ROUTES
+
 app.use('/auth', authController)
 app.use('/listings', listingController)
 app.get('/vip-lounge', isSignedIn, (req, res) => {

@@ -35,7 +35,7 @@
 
     <div class="container my-5 listing-details"> 
         <h2>
-        <strong>Listing name:</strong> <%= foundListing.title %>
+        <%= foundListing.title %>
         </h2>
         <p><strong>By:</strong> <%= foundListing.User.username %></p>
         <img src="<%= foundListing.image.url %>" class="listing-img" alt="Image of <%= foundListing.title %>" style="border-radius: 10px;"/>

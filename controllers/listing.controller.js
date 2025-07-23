@@ -26,14 +26,14 @@ router.post('/', isSignedIn, upload.single('image'), async (req, res) => {
 
 router.get('/', async (req, res) => {
     const foundListings = await Listing.find().populate('User')
-    console.log(foundListings)
+    
     res.render('listings/index.ejs', { foundListings: foundListings })
 })
 
 router.get('/mylistings', isSignedIn, async (req, res) => {
     try {
         const userListings = await Listing.find({ User: req.session.user._id }).populate('User')
-        console.log('User listings:', userListings)
+        
         res.render('listings/mylistings.ejs', { foundListings: userListings })
     } catch (error) {
         console.log(error)
@@ -45,7 +45,7 @@ router.get('/mylistings', isSignedIn, async (req, res) => {
 router.get('/:listingId', async (req, res) => {
     try {
         const foundListing = await Listing.findById(req.params.listingId).populate('User').populate('comments.author')
-        console.log(foundListing)
+        
         res.render('listings/show.ejs', { foundListing: foundListing })
     } catch (error) {
         console.log(error)
