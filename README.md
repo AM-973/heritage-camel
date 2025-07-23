@@ -1,7 +1,8 @@
 
 ## Heritage camel
 
-![Logo](./public/images/camel.jpg)
+
+<img src="./public/images/camel.jpg" alt="drawing" width="200"/>
 
 ## 🕹️ Description
 
