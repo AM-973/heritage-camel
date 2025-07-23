@@ -1,5 +1,5 @@
-```
-# Heritage camel
+
+## Heritage camel
 
 ![Logo](./public/images/camel.jpg)
 
@@ -34,5 +34,3 @@ and the ability to create comments under the posts you like.
 - add a favorites option for users to favorite their favorite posts
 - Add more animations 
 - Make it mobile-friendly
-
-```
