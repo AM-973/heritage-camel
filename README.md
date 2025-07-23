@@ -12,13 +12,13 @@ and the ability to create comments under the posts you like.
 
 ## 🚀 Getting Started
 
-**Use the app here:** [Deployed Application link](https://your-deployment-link.com)
+**Use the app here:** [Hertiage Camel Deployment link](https://your-deployment-link.com)
 
 **Project Planning Materials:**  
-- [Wireframes](./planning/wireframes.png)  
-- [User Stories](./planning/user-stories.md)  
-- [Trello Board](https://trello.com/your-board)
-
+- [Wireframes](https://trello.com/c/5hWumEpw/11-viewall-signin-signup-dashboard)  
+- [ERD](https://trello.com/c/ZRpzBLpD/12-full-schema-erd)
+- [User Stories](https://trello.com/c/94HSXU2I/1-as-a-user-i-want-to-sign-up-for-an-account-so-that-i-can-access-member-only-features)  
+- [Trello Board](https://trello.com/c/s0mLQGPY/10-pseudocode)
 
 ## 💡 Technologies Used
 
@@ -28,6 +28,23 @@ and the ability to create comments under the posts you like.
 - Bootstrap
 - EJS
 - Express
+
+## Packages used
+
+```Json
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^1.41.3",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^17.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.16.3",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.1",
+    "multer-storage-cloudinary": "^4.0.0"
+```
 
 ## 🚧 Next Steps
 
