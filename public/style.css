@@ -1,11 +1,9 @@
 * {
     box-sizing: border-box;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-
 @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
-
 
 body {
     background-color: #f8f9fa;
@@ -16,7 +14,6 @@ h1 {
     margin: 20px 0;
     text-align: center;
 }
-
 
 .container-custom {
     max-width: 960px;
@@ -40,7 +37,7 @@ h1 {
 .box {
     background-color: #007bff;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
 .box:hover {
@@ -62,13 +59,14 @@ h1 {
     margin: 0 auto;
     display: block;
 }
-form.d-inline{
+
+form.d-inline {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:auto;
-    padding:0;
-    border:none;
+    margin: auto;
+    padding: 0;
+    border: none;
 }
 
 form {
@@ -77,9 +75,8 @@ form {
     padding: 15px;
     background: #fff;
     border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 
 form label {
@@ -88,13 +85,14 @@ form label {
     margin-top: 10px;
 }
 
-form input,form textarea {
+form input, form textarea {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ced4da;
     border-radius: 4px;
 }
+
 form button {
     margin-top: 15px;
     padding: 10px 15px;
@@ -106,7 +104,7 @@ form button {
     transition: background-color 0.3s ease;
 }
 
-form a{
+form a {
     margin-top: 15px;
     padding: 10px 15px;
     border-radius: 4px;
@@ -118,10 +116,10 @@ form button:hover {
     background-color: #218838;
 }
 
-.navmarketplace{
+.navmarketplace {
     display: flex;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
     font-size: 1.5rem;
     color: #007bff;
 }
@@ -131,14 +129,14 @@ form button:hover {
     color: white;
     border: none;
     cursor: pointer;
-    
+
 }
 
 #delete-btn:hover {
     background-color: #c82333;
 }
 
-.listing-img{
+.listing-img {
     width: 30vw;
 }
 
