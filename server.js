@@ -41,9 +41,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/auth', authController)
 app.use('/listings', listingController)
-app.get('/vip-lounge', isSignedIn, (req, res) => {
-    res.send(`Welcome ${req.session.user.username}`)
-})
 
 const port = process.env.PORT ? process.env.PORT : "3000"
 app.listen(port, () => {
