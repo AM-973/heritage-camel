@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+
+body {
+    background-color: #f8f9fa;
+}
+
+
+h1 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+
+.container-custom {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.box, .box2 {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+
+.box {
+    background-color: #007bff;
+    justify-content: center;
+    align-items: center;    
+}
+
+.box:hover {
+    background-color: #000000;
+}
+
+.box2 {
+    background-color: #dc3545;
+}
+
+.box2:hover {
+    background-color: #c82333;
+}
+
+.listing-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+form.d-inline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    padding:0;
+    border:none;
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+form input,form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+form button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form a{
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+.navmarketplace{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+#delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+}
+
+#delete-btn:hover {
+    background-color: #c82333;
+}
+
+.listing-img{
+    width: 30vw;
+}
+
+.listing-details {
+    text-align: center;
+    margin-top: 20px;
+    justify-content: center;
+}

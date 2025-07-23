@@ -1,0 +1,31 @@
+<%- include ('../partials/head') %>
+    <h1>Add a Listing</h1>
+    <form action="/listings" method="POST" enctype="multipart/form-data">
+
+
+        <label for="title" required>Title:</label>
+        <input type="text" name="title" id="title" required>
+
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" placeholder="Enter a description" required></textarea>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" required>
+
+        <label for="date">Date visited:</label>
+        <input type="date" name="date" id="date" required>
+
+        <label for="notes">Notes:</label>
+        <input type="text" name="notes" id="notes">
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload an Image</label>
+            <input type="file" accept="image/*"name="image" id="image" class="form-control" required>
+        </div>
+        <button type="submit">Create Listing</button>
+        <a href="/listings" class="btn btn-secondary">Back to Listings</a>  
+    </form>
+
+</body>
+
+</html>

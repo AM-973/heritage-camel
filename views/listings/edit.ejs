@@ -1,0 +1,36 @@
+<%- include ('../partials/head') %>
+    <h1>Edit the Listing</h1>
+    <form action="/listings/<%= foundListing._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+        <label for="title" required>Title:</label>
+        <input type="text" name="title" id="title" placeholder="Enter the name of the heritage site" value="<%= foundListing.title %>" required>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" placeholder="Enter a location, e.g. Manama, Bahrain" value="<%= foundListing.location %>" required>
+
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" placeholder="Enter a description" required><%= foundListing.description %></textarea>
+
+        <label for="notes">Notes:</label>
+        <input type="text" name="notes" id="notes" value="<%= foundListing.notes %>">
+
+        <label for="date">Date visited:</label>
+        <input type="date" name="date" id="date" value="<%= foundListing.date ? new Date(foundListing.date).toISOString().split('T')[0] : '' %>" required>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload a New Image (optional)</label>
+            <input type="file" accept="image/*" name="image" id="image" class="form-control">
+            <small class="form-text text-muted">Leave empty to keep current image</small>
+        </div>
+
+        <button type="submit">Edit Listing</button>
+        <a href="/listings/<%= foundListing._id %>" class="btn btn-warning">Cancel edit</a>
+        <a href="/listings" class="btn btn-secondary">Back to Listings</a>
+        <% if (foundListing.User._id.equals(user._id)) { %>
+        <button type="submit" id="delete-btn" class="btn btn-danger" style="margin-bottom: 15px;">Delete</button>
+        <% } %>
+    </form>
+
+</body>
+
+</html>

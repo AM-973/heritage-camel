@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <title>All the Listings</title>
+    <style>
+        .card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navmarketplace navbar-brand text-primary " href="/"><img src="/images/camel.jpg"" alt="Heritage camel" class="img-fluid" style="width: 50px; height: 50px; border-radius: 50%;"/></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <% if (user) { %>
+                    <li class="nav-item"><a class="nav-link" href="/auth/sign-out">Sign Out</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/listings/new">New Listing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/listings/mylistings">My Listings</a></li>
+                    <% } else { %>
+                    <li class="nav-item"><a class="nav-link" href="/auth/sign-up">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/auth/sign-in">Sign In</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center text-black mb-4">Heritage location Listings</h1>
+        <div class="row g-4">
+            <% foundListings.forEach((listing) => { %>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="<%= listing.image.url %>" class="card-img-top" alt="Image of <%= listing.title %>">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="/listings/<%= listing._id %>" class="stretched-link text-decoration-none text-dark"><strong>Location name:</strong> <%= listing.title %></a>
+                            </h5>
+                            <p class="card-text"><strong>By:</strong> <%= listing.User.username %></p>
+                            <p class="card-text"><strong>Description:</strong> <%= listing.description %></p>
+                            <p class="card-text"><strong>Location:</strong> <%= listing.location ? listing.location : 'Not specified' %></p>
+                            <p class="card-text"><strong>Date visited:</strong> <%= listing.date ? new Date(listing.date).toDateString() : 'Not specified' %></p>
+
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <p class="fw-bold text-secondary">Notes: <%= listing.notes %> </p>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
