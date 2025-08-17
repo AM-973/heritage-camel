@@ -12,7 +12,7 @@ and the ability to create comments under the posts you like.
 
 ## 🚀 Getting Started
 
-**Use the app here:** [Hertiage Camel Deployment link](https://your-deployment-link.com)
+**Use the app here:** [Hertiage Camel Deployed app link](https://heritage-camel-859ff8853a54.herokuapp.com/)
 
 **Project Planning Materials:**  
 - [Wireframes](https://trello.com/c/5hWumEpw/11-viewall-signin-signup-dashboard)  
